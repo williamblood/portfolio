@@ -1,0 +1,10 @@
+.main-head {
+  width: 95%;
+  margin: 0 0 0 auto;
+}
+nav {
+  @include flex(space-between, center, row);
+  min-height: 10vh;
+  width: 60%;
+  flex-wrap: wrap;
+}
