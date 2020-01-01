@@ -7,7 +7,7 @@ html {
   font-size: 62.5%;
 }
 h1 {
-  font-size: var(--header1);
+  font-size: $header1;
 }
 li,
 button,
@@ -15,23 +15,22 @@ label,
 input,
 a,
 p {
-  font-size: var(--text);
+  font-size: $text;
 }
 h2 {
-  font-size: var(--header2);
+  font-size: $header2;
 }
 h3 {
-  font-size: var(--header3);
+  font-size: $header3;
 }
 h4,
 h5 {
-  font-size: var(--header3);
+  font-size: $header3;
 }
-
 ul {
   list-style: none;
 }
 a {
   text-decoration: none;
-  color: black;
+  color: $gray-text;
 }

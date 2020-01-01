@@ -7,4 +7,15 @@ nav {
   min-height: 10vh;
   width: 60%;
   flex-wrap: wrap;
+  .logo {
+    @include flex(flex-start, center, row);
+    flex: 1 1 10rem;
+    h1 {
+      margin: 2rem;
+    }
+  }
+  ul {
+    @include flex(space-around, center, row);
+    flex: 1 1 40rem;
+  }
 }
