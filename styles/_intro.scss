@@ -19,3 +19,50 @@ nav {
     flex: 1 1 40rem;
   }
 }
+.intro {
+  min-height: 90vh;
+  width: 90%;
+  margin: auto;
+  flex-wrap: wrap;
+  @include flex(space-between, center, row);
+  h2 {
+    font-size: 8rem;
+    padding-top: 2rem;
+    background: $gradient;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block; // use inline-block to clip bg color (gradient) to elem
+  }
+  h3 {
+    font-size: 6rem;
+    padding: 2rem 0rem;
+  }
+  p {
+    padding-top: 2rem;
+    color: $gray-text;
+  }
+}
+.splash {
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  height: 100%;
+  z-index: -1;
+}
+
+.intro-social {
+  margin-top: 4rem;
+  a {
+    margin-right: 3rem;
+  }
+}
+.active {
+  background: $gray-text;
+  padding: 1rem 3rem;
+  color: white;
+  border-radius: 2rem;
+}
+.intro-social,
+.intro-text {
+  flex: 1 1 40rem;
+}
