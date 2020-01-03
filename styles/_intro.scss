@@ -30,6 +30,7 @@ nav {
     padding-top: 2rem;
     background: $gradient;
     background-clip: text;
+    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     display: inline-block; // use inline-block to clip bg color (gradient) to elem
   }
@@ -65,4 +66,56 @@ nav {
 .intro-social,
 .intro-text {
   flex: 1 1 40rem;
+}
+
+/* Animations */
+#face {
+  animation: fadeIn ease-in 2s;
+  #left-eye,
+  #right-eye {
+    animation: centerEyes ease 8s infinite alternate 5s;
+  }
+  #left-pupil,
+  #right-pupil {
+    animation: centerPupils ease 8s infinite alternate 5s;
+  }
+  #smile,
+  #left-cheek,
+  #right-cheek {
+    animation: creepSmile ease-in 8s infinite alternate 10s;
+  }
+}
+@keyframes centerEyes {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-2%);
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(5%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+@keyframes centerPupils {
+  from {
+    transform: translate(0%, 0%);
+  }
+  to {
+    transform: translate(1%, -1.5%);
+  }
+}
+@keyframes creepSmile {
+  from {
+    transform: translate(0%);
+  }
+  to {
+    transform: translateY(-8%);
+  }
 }
