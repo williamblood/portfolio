@@ -10,7 +10,7 @@ html {
 }
 
 body {
-  background: #e0ebff38;
+  background: #a7adb9;
   font-family: "Montserrat", sans-serif;
 }
 
@@ -160,8 +160,8 @@ nav ul {
 .splash {
   position: absolute;
   top: 0%;
-  right: 0%;
-  height: 90%;
+  right: -5%;
+  height: 100%;
   z-index: -1;
 }
 
@@ -312,13 +312,9 @@ nav ul {
 }
 
 /* Mobile */
-@media screen and (max-width: 1299px) {
-  .main-head {
-    width: 95%;
-    margin: auto;
-  }
+@media screen and (max-width: 1315px) {
   html {
-    font-size: 40%;
+    font-size: 55%;
   }
   body {
     background: white;
@@ -348,24 +344,38 @@ nav ul {
         -ms-flex-pack: left;
             justify-content: left;
     margin: 0rem 2rem 0rem 0rem;
-    text-align: start;
   }
-  .intro-text {
-    -webkit-box-flex: 1;
-        -ms-flex: 1 2 40rem;
-            flex: 1 2 40rem;
+  nav ul {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
   .intro-images {
     -webkit-box-flex: 1;
-        -ms-flex: 1 1 70rem;
-            flex: 1 1 70rem;
+        -ms-flex: 1 2 70rem;
+            flex: 1 2 70rem;
     padding: 0 0;
     text-align: center;
+  }
+  .main-head {
+    margin: 0;
+    width: 100%;
   }
 }
 
 /* Tablet */
-@media screen and (max-width: 782px) {
+@media screen and (max-width: 1133px) {
+  .main-head {
+    width: 90%;
+    margin: auto;
+  }
+  .intro {
+    width: 90%;
+    margin: auto;
+  }
+  html {
+    font-size: 50%;
+  }
   .intro-text {
     text-align: center;
     margin: 5rem 0 2rem 0;
@@ -392,14 +402,10 @@ nav ul {
   svg {
     height: 60%;
   }
-  .main-head {
-    width: 90%;
-    margin: auto;
-  }
 }
 
 /* Phone/Mobile */
-@media screen and (max-width: 469px) {
+@media screen and (max-width: 570px) {
   .main-head {
     width: 100%;
   }
