@@ -16,3 +16,72 @@ $gray-text: #2c2c2c;
 
 @import "global";
 @import "intro";
+/* Mobile */
+@media screen and (max-width: 1299px) {
+  .main-head {
+    width: 95%;
+    margin: auto;
+  }
+  html {
+    font-size: 40%;
+  }
+  body {
+    background: white;
+  }
+  .splash {
+    display: none;
+  }
+  svg {
+    width: 80%;
+  }
+  nav {
+    width: 90%;
+    margin: auto;
+    .logo {
+      @include flex(left, center, row);
+      margin: 0rem 2rem 0rem 0rem;
+      text-align: start;
+    }
+  }
+  .intro-text {
+    flex: 1 2 40rem;
+  }
+  .intro-images {
+    flex: 1 1 70rem;
+    padding: 0 0;
+    text-align: center;
+  }
+}
+/* Tablet */
+@media screen and (max-width: 782px) {
+  .intro-text {
+    text-align: center;
+    margin: 5rem 0 2rem 0;
+  }
+  nav {
+    padding: 0 1rem 0 0;
+    .logo {
+      @include flex(left, left, row);
+      padding: 0 0rem 0 0;
+    }
+  }
+  svg {
+    height: 60%;
+  }
+  .main-head {
+    width: 90%;
+    margin: auto;
+  }
+}
+/* Phone/Mobile */
+@media screen and (max-width: 469px) {
+  .main-head {
+    width: 100%;
+  }
+  nav {
+    .logo {
+      @include flex(center, center, row);
+      padding: 2rem 0;
+    }
+  }
+}
