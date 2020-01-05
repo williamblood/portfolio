@@ -10,7 +10,7 @@ html {
 }
 
 body {
-  background: #9a9baf;
+  background: #3f3d567a;
   font-family: "Montserrat", sans-serif;
 }
 
@@ -312,6 +312,54 @@ nav ul {
   }
 }
 
+.projects {
+  width: 100%;
+  margin: auto;
+  min-height: 90vh;
+  padding: 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  background: white;
+}
+
+.projects h2 {
+  margin: 5rem;
+}
+
+.aern,
+.visionary {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 40rem;
+          flex: 1 1 40rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 /* Mobile */
 @media screen and (max-width: 1409px) {
   html {
@@ -406,7 +454,7 @@ nav ul {
 }
 
 /* Phone/Mobile */
-@media screen and (max-width: 585px) {
+@media screen and (max-width: 600px) {
   .main-head {
     width: 100%;
   }
