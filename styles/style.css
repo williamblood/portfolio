@@ -405,7 +405,7 @@ nav ul {
 }
 
 /* Phone/Mobile */
-@media screen and (max-width: 570px) {
+@media screen and (max-width: 585px) {
   .main-head {
     width: 100%;
   }
@@ -424,6 +424,9 @@ nav ul {
         -ms-flex-pack: center;
             justify-content: center;
     padding: 2rem 0;
+  }
+  nav ul {
+    margin-right: 5%;
   }
 }
 /*# sourceMappingURL=style.css.map */

@@ -80,7 +80,7 @@ $gray-text: #2c2c2c;
   }
 }
 /* Phone/Mobile */
-@media screen and (max-width: 570px) {
+@media screen and (max-width: 585px) {
   .main-head {
     width: 100%;
   }
@@ -88,6 +88,9 @@ $gray-text: #2c2c2c;
     .logo {
       @include flex(center, center, row);
       padding: 2rem 0;
+    }
+    ul {
+      margin-right: 5%;
     }
   }
 }
