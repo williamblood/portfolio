@@ -49,6 +49,7 @@ nav {
   right: 0%;
   height: 100%;
   z-index: -1;
+  overflow: hidden;
 }
 
 .intro-social {
@@ -69,7 +70,7 @@ nav {
 }
 .intro-images {
   flex: 1 1 10rem;
-  padding: 0rem 10rem;
+  padding: 0rem 15rem;
 }
 /* Animations */
 #face {

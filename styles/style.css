@@ -10,7 +10,7 @@ html {
 }
 
 body {
-  background: #a7adb9;
+  background: #9a9baf;
   font-family: "Montserrat", sans-serif;
 }
 
@@ -163,6 +163,7 @@ nav ul {
   right: 0%;
   height: 100%;
   z-index: -1;
+  overflow: hidden;
 }
 
 .intro-social {
@@ -191,7 +192,7 @@ nav ul {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 10rem;
           flex: 1 1 10rem;
-  padding: 0rem 10rem;
+  padding: 0rem 15rem;
 }
 
 /* Animations */
@@ -312,7 +313,7 @@ nav ul {
 }
 
 /* Mobile */
-@media screen and (max-width: 1315px) {
+@media screen and (max-width: 1409px) {
   html {
     font-size: 55%;
   }
