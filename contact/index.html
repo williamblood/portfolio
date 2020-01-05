@@ -18,8 +18,31 @@
     <title>William Blood | Portfolio</title>
   </head>
   <body class="canvas">
+    <header class="main-head">
+      <nav>
+        <div class="logo">
+          <img src="/content/icons/code.svg" alt="logo" />
+          <h1>WB</h1>
+        </div>
+        <ul>
+          <li>
+            <a href="/">Home</a>
+          </li>
+          <li>
+            <a href="/projects/">Projects</a>
+          </li>
+          <li>
+            <a href="../contact/" class="active">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
     <section class="contact">
-      <form action="https://formspree.io/xeqeongd" method="POST">
+      <form
+        class="form-wrapper"
+        action="https://formspree.io/xeqeongd"
+        method="POST"
+      >
         <label for="name">Name</label>
         <input type="text" name="name" id="name" required />
         <label for="email">Email</label>
@@ -30,7 +53,26 @@
       </form>
     </section>
     <footer>
-      <h2>William Blood &copy;</h2>
+      <div class="footer-wrapper">
+        <h4>William Blood &copy;</h4>
+        <ul>
+          <li>
+            <a href="#"
+              ><img src="/content/icons/twitter 1.svg" alt="twitter-link"
+            /></a>
+          </li>
+          <li>
+            <a href="#"
+              ><img src="/content/icons/instagram 1.svg" alt="instagram-link"
+            /></a>
+          </li>
+          <li>
+            <a href="#"
+              ><img src="/content/icons/youtube-symbol 1.svg" alt="youtube-link"
+            /></a>
+          </li>
+        </ul>
+      </div>
     </footer>
   </body>
 </html>
