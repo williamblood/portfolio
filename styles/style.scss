@@ -17,6 +17,9 @@ $gray-text: #2c2c2c;
 @import "global";
 @import "intro";
 @import "projects";
+@import "contact";
+@import "footer";
+
 /* Mobile */
 @media screen and (max-width: 1409px) {
   html {
@@ -40,6 +43,7 @@ $gray-text: #2c2c2c;
     }
     ul {
       justify-content: space-between;
+      padding: 2rem 0;
     }
   }
   .intro-images {
@@ -81,17 +85,30 @@ $gray-text: #2c2c2c;
   }
 }
 /* Phone/Mobile */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 690px) {
+  html {
+    font-size: 40%;
+  }
   .main-head {
     width: 100%;
   }
   nav {
     .logo {
       @include flex(center, center, row);
-      padding: 2rem 0;
+      padding: 1rem 0;
     }
-    ul {
-      margin-right: 5%;
+  }
+  .visionary,
+  .aern {
+    flex: 1 1 50rem;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .contact {
+    form {
+      padding: 3rem 8rem;
     }
   }
 }
