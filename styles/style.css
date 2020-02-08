@@ -167,11 +167,18 @@ nav ul {
 }
 
 .intro-social {
-  margin-top: 4rem;
+  margin: 4rem 0 10rem 0;
 }
 
 .intro-social a {
-  margin-right: 3rem;
+  padding: 1.5rem 4rem;
+  margin-right: 1rem;
+  border-radius: 1.5rem;
+}
+
+.intro-social .projects-link {
+  background: black;
+  color: white;
 }
 
 .active {

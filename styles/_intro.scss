@@ -1,126 +1,132 @@
 .main-head {
-  width: 95%;
-  margin: 0 0 0 auto;
+	width: 95%;
+	margin: 0 0 0 auto;
 }
 nav {
-  @include flex(space-between, center, row);
-  min-height: 10vh;
-  width: 60%;
-  flex-wrap: wrap;
-  .logo {
-    @include flex(flex-start, center, row);
-    flex: 1 1 10rem;
-    h1 {
-      margin: 2rem;
-    }
-  }
-  ul {
-    @include flex(space-around, center, row);
-    flex: 1 1 40rem;
-  }
+	@include flex(space-between, center, row);
+	min-height: 10vh;
+	width: 60%;
+	flex-wrap: wrap;
+	.logo {
+		@include flex(flex-start, center, row);
+		flex: 1 1 10rem;
+		h1 {
+			margin: 2rem;
+		}
+	}
+	ul {
+		@include flex(space-around, center, row);
+		flex: 1 1 40rem;
+	}
 }
 .intro {
-  min-height: 90vh;
-  width: 90%;
-  margin: auto;
-  flex-wrap: wrap;
-  @include flex(space-between, center, row);
-  h2 {
-    font-size: 8rem;
-    padding-top: 2rem;
-    background: $gradient;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    display: inline-block; // use inline-block to clip bg color (gradient) to elem
-  }
-  h3 {
-    font-size: 6rem;
-    padding: 2rem 0rem;
-  }
-  p {
-    padding-top: 2rem;
-    color: $gray-text;
-  }
+	min-height: 90vh;
+	width: 90%;
+	margin: auto;
+	flex-wrap: wrap;
+	@include flex(space-between, center, row);
+	h2 {
+		font-size: 8rem;
+		padding-top: 2rem;
+		background: $gradient;
+		background-clip: text;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		display: inline-block; // use inline-block to clip bg color (gradient) to elem
+	}
+	h3 {
+		font-size: 6rem;
+		padding: 2rem 0rem;
+	}
+	p {
+		padding-top: 2rem;
+		color: $gray-text;
+	}
 }
 .splash {
-  position: absolute;
-  top: 0%;
-  right: 0%;
-  height: 100%;
-  z-index: -1;
-  overflow: hidden;
+	position: absolute;
+	top: 0%;
+	right: 0%;
+	height: 100%;
+	z-index: -1;
+	overflow: hidden;
 }
 
 .intro-social {
-  margin-top: 4rem;
-  a {
-    margin-right: 3rem;
-  }
+	margin: 4rem 0 10rem 0;
+	a {
+		padding: 1.5rem 4rem;
+		margin-right: 1rem;
+		border-radius: 1.5rem;
+	}
+	.projects-link {
+		background: black;
+		color: white;
+	}
 }
 .active {
-  background: $gray-text;
-  padding: 1rem 3rem;
-  color: white;
-  border-radius: 2rem;
+	background: $gray-text;
+	padding: 1rem 3rem;
+	color: white;
+	border-radius: 2rem;
 }
 .intro-social,
 .intro-text {
-  flex: 1 1 40rem;
+	flex: 1 1 40rem;
 }
 .intro-images {
-  flex: 1 1 10rem;
-  padding: 0rem 15rem;
+	flex: 1 1 10rem;
+	padding: 0rem 15rem;
 }
 
 /* Animations */
 #face {
-  animation: fadeIn ease-in 1s;
-  #left-eye,
-  #right-eye {
-    animation: centerEyes ease 8s infinite alternate 5s;
-  }
-  #left-pupil,
-  #right-pupil {
-    animation: centerPupils ease 8s infinite alternate 5s;
-  }
-  #smile,
-  #left-cheek,
-  #right-cheek {
-    animation: creepSmile ease-in 8s infinite alternate 10s;
-  }
+	animation: fadeIn ease-in 1s;
+	#left-eye,
+	#right-eye {
+		animation: centerEyes ease 8s infinite alternate 5s;
+	}
+	#left-pupil,
+	#right-pupil {
+		animation: centerPupils ease 8s infinite alternate 5s;
+	}
+	#smile,
+	#left-cheek,
+	#right-cheek {
+		animation: creepSmile ease-in 8s infinite alternate 10s;
+	}
 }
 @keyframes centerEyes {
-  from {
-    transform: translateY(0);
-  }
-  to {
-    transform: translateY(-2%);
-  }
+	from {
+		transform: translateY(0);
+	}
+	to {
+		transform: translateY(-2%);
+	}
 }
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(5%);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0%);
-  }
+	from {
+		opacity: 0;
+		transform: translateY(5%);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0%);
+	}
 }
 @keyframes centerPupils {
-  from {
-    transform: translate(0%, 0%);
-  }
-  to {
-    transform: translate(1%, -1.5%);
-  }
+	from {
+		transform: translate(0%, 0%);
+	}
+	to {
+		transform: translate(1%, -1.5%);
+	}
 }
 @keyframes creepSmile {
-  from {
-    transform: translate(0%);
-  }
-  to {
-    transform: translateY(-8%);
-  }
+	from {
+		transform: translate(0%);
+	}
+	to {
+		transform: translateY(-8%);
+	}
 }
