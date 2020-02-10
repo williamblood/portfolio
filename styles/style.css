@@ -204,8 +204,8 @@ nav ul {
 
 /* Animations */
 #face {
-  -webkit-animation: fadeIn ease-in 1s;
-          animation: fadeIn ease-in 1s;
+  -webkit-animation: fadeIn ease-in 0.4s;
+          animation: fadeIn ease-in 0.4s;
 }
 
 #face #left-eye,
@@ -368,8 +368,8 @@ nav ul {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-animation: fadeIn ease-in 0.5s;
-          animation: fadeIn ease-in 0.5s;
+  -webkit-animation: fadeIn ease-in 0.4s;
+          animation: fadeIn ease-in 0.4s;
 }
 
 .aern img,

@@ -17,7 +17,7 @@
 	flex: 1 1 40rem;
 	margin-bottom: 5rem;
 	@include flex(center, center, column);
-	animation: fadeIn ease-in 0.5s;
+	animation: fadeIn ease-in 0.4s;
 	img {
 		border-radius: 3rem;
 		-webkit-transition: all 0.3s
