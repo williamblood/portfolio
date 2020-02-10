@@ -407,8 +407,8 @@ nav ul {
 }
 
 .contact form {
-  -webkit-animation: fadeIn ease-in 1s;
-          animation: fadeIn ease-in 1s;
+  -webkit-animation: fadeIn ease-in 0.4s;
+          animation: fadeIn ease-in 0.4s;
   padding: 3rem 10rem;
   border-radius: 2rem;
   display: -webkit-box;
