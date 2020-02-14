@@ -93,7 +93,12 @@ nav .logo {
           flex: 1 1 10rem;
 }
 
+nav .logo img {
+  height: 4.5rem;
+}
+
 nav .logo h1 {
+  font-weight: lighter;
   margin: 2rem;
 }
 

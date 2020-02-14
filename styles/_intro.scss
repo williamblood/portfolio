@@ -10,7 +10,11 @@ nav {
 	.logo {
 		@include flex(flex-start, center, row);
 		flex: 1 1 10rem;
+		img {
+			height: 4.5rem;
+		}
 		h1 {
+			font-weight: lighter;
 			margin: 2rem;
 		}
 	}
