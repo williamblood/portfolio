@@ -278,7 +278,7 @@ nav ul {
             transform: translateY(50%);
   }
   to {
-    opacity: 0.95;
+    opacity: 1;
     -webkit-transform: translateY(0%);
             transform: translateY(0%);
   }
@@ -291,7 +291,7 @@ nav ul {
             transform: translateY(50%);
   }
   to {
-    opacity: 0.95;
+    opacity: 1;
     -webkit-transform: translateY(0%);
             transform: translateY(0%);
   }
@@ -303,8 +303,8 @@ nav ul {
             transform: translate(0%, 0%);
   }
   to {
-    -webkit-transform: translate(1%, -1.5%);
-            transform: translate(1%, -1.5%);
+    -webkit-transform: translate(1%, -2%);
+            transform: translate(1%, -2%);
   }
 }
 
@@ -314,8 +314,8 @@ nav ul {
             transform: translate(0%, 0%);
   }
   to {
-    -webkit-transform: translate(1%, -1.5%);
-            transform: translate(1%, -1.5%);
+    -webkit-transform: translate(1%, -2%);
+            transform: translate(1%, -2%);
   }
 }
 
@@ -325,8 +325,8 @@ nav ul {
             transform: translate(0%);
   }
   to {
-    -webkit-transform: translateY(-6%);
-            transform: translateY(-6%);
+    -webkit-transform: translateY(-5%);
+            transform: translateY(-5%);
   }
 }
 
@@ -336,8 +336,8 @@ nav ul {
             transform: translate(0%);
   }
   to {
-    -webkit-transform: translateY(-6%);
-            transform: translateY(-6%);
+    -webkit-transform: translateY(-5%);
+            transform: translateY(-5%);
   }
 }
 
