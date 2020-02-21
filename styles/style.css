@@ -209,27 +209,44 @@ nav ul {
 
 /* Animations */
 #face {
-  -webkit-animation: fadeIn ease-in 0.4s;
-          animation: fadeIn ease-in 0.4s;
+  animation: fadeIn ease 1s, flicker ease-in-out 0.2s infinite alternate-reverse 8s, flicker ease-out 1s infinite alternate-reverse 8.5s;
 }
 
 #face #left-eye,
 #face #right-eye {
-  -webkit-animation: centerEyes ease 8s infinite alternate 5s;
-          animation: centerEyes ease 8s infinite alternate 5s;
+  -webkit-animation: centerEyes ease 6s infinite alternate 5s;
+          animation: centerEyes ease 6s infinite alternate 5s;
 }
 
 #face #left-pupil,
 #face #right-pupil {
-  -webkit-animation: centerPupils ease 8s infinite alternate 5s;
-          animation: centerPupils ease 8s infinite alternate 5s;
+  -webkit-animation: centerPupils ease 6s infinite alternate 5s;
+          animation: centerPupils ease 6s infinite alternate 5s;
 }
 
 #face #smile,
 #face #left-cheek,
 #face #right-cheek {
-  -webkit-animation: creepSmile ease-in 8s infinite alternate 10s;
-          animation: creepSmile ease-in 8s infinite alternate 10s;
+  -webkit-animation: creepSmile ease-in 7s infinite alternate 10s;
+          animation: creepSmile ease-in 7s infinite alternate 10s;
+}
+
+@-webkit-keyframes flicker {
+  from {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes flicker {
+  from {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @-webkit-keyframes centerEyes {
@@ -257,11 +274,11 @@ nav ul {
 @-webkit-keyframes fadeIn {
   from {
     opacity: 0;
-    -webkit-transform: translateY(5%);
-            transform: translateY(5%);
+    -webkit-transform: translateY(50%);
+            transform: translateY(50%);
   }
   to {
-    opacity: 1;
+    opacity: 0.95;
     -webkit-transform: translateY(0%);
             transform: translateY(0%);
   }
@@ -270,11 +287,11 @@ nav ul {
 @keyframes fadeIn {
   from {
     opacity: 0;
-    -webkit-transform: translateY(5%);
-            transform: translateY(5%);
+    -webkit-transform: translateY(50%);
+            transform: translateY(50%);
   }
   to {
-    opacity: 1;
+    opacity: 0.95;
     -webkit-transform: translateY(0%);
             transform: translateY(0%);
   }
@@ -308,8 +325,8 @@ nav ul {
             transform: translate(0%);
   }
   to {
-    -webkit-transform: translateY(-8%);
-            transform: translateY(-8%);
+    -webkit-transform: translateY(-6%);
+            transform: translateY(-6%);
   }
 }
 
@@ -319,8 +336,8 @@ nav ul {
             transform: translate(0%);
   }
   to {
-    -webkit-transform: translateY(-8%);
-            transform: translateY(-8%);
+    -webkit-transform: translateY(-6%);
+            transform: translateY(-6%);
   }
 }
 
@@ -373,8 +390,8 @@ nav ul {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-animation: fadeIn ease-in 0.4s;
-          animation: fadeIn ease-in 0.4s;
+  -webkit-animation: fadeIn ease 1s;
+          animation: fadeIn ease 1s;
 }
 
 .aern img,
@@ -412,8 +429,8 @@ nav ul {
 }
 
 .contact form {
-  -webkit-animation: fadeIn ease-in 0.4s;
-          animation: fadeIn ease-in 0.4s;
+  -webkit-animation: fadeIn ease 1s;
+          animation: fadeIn ease 1s;
   padding: 3rem 10rem;
   border-radius: 2rem;
   display: -webkit-box;

@@ -4,7 +4,7 @@
 	height: 90vh;
 	@include flex(center, center, column);
 	form {
-		animation: fadeIn ease-in 0.4s;
+		animation: fadeIn ease 1s;
 		padding: 3rem 10rem;
 		border-radius: 2rem;
 		@include flex(center, center, column);
