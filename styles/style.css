@@ -187,9 +187,9 @@ nav ul {
 }
 
 .active {
-  background: #2c2c2c;
+  background: #f8f8f8;
   padding: 1rem 3rem;
-  color: white;
+  color: black;
   border-radius: 2rem;
 }
 
