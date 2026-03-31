@@ -308,6 +308,28 @@ const products = [
     inventoryCount: 20,
     variants: [],
   },
+  {
+    supplierProductId: "bo-009",
+    name: "Jazz Club Body Oil",
+    slug: "jazz-club-body-oil",
+    description:
+      "Dim lights, leather stools, and a late-night glass of rum — captured in a body oil. This smooth, sophisticated blend opens with pink pepper and neroli before settling into a dark, woody heart of tobacco leaf, vetiver, and lush oakmoss. A slow, lingering dry-down of musk and vanilla makes this one of the most complex and wearable oils in the collection. Inspired by the legendary Replica Jazz Club fragrance.",
+    images: [
+      "https://images.unsplash.com/photo-1541643600914-78b084683702?w=800&q=80",
+      "https://images.unsplash.com/photo-1590736704728-f4730bb30770?w=800&q=80",
+    ],
+    supplierPrice: 5.80,
+    price: 21.99,
+    compareAtPrice: 26.00,
+    category: "Body Oils",
+    tags: ["tobacco", "vetiver", "oakmoss", "musk", "unisex", "body oil", "woody"],
+    inStock: true,
+    inventoryCount: 85,
+    variants: [
+      { supplierVariantId: "bo-009-10ml", name: "Size", value: "10ml", supplierPrice: 5.80, price: 21.99, inventoryCount: 45 },
+      { supplierVariantId: "bo-009-30ml", name: "Size", value: "30ml", supplierPrice: 10.20, price: 34.99, inventoryCount: 40 },
+    ],
+  },
 ];
 
 async function main() {
