@@ -9,13 +9,14 @@ function isAdminAuthorized(req: NextRequest): boolean {
 }
 
 // GET /api/admin/orders/[id]
-export async function GET(req: NextRequest, { params }: { params: { id: string } }) {
+export async function GET(req: NextRequest, { params }: { params: Promise<{ id: string }> }) {
   if (!isAdminAuthorized(req)) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
 
+  const { id } = await params;
   const order = await prisma.order.findUnique({
-    where: { id: params.id },
+    where: { id },
     include: {
       customer: true,
       items: { include: { product: true } },
@@ -38,11 +39,12 @@ export async function GET(req: NextRequest, { params }: { params: { id: string }
 }
 
 // PATCH /api/admin/orders/[id] — update status, tracking, price override
-export async function PATCH(req: NextRequest, { params }: { params: { id: string } }) {
+export async function PATCH(req: NextRequest, { params }: { params: Promise<{ id: string }> }) {
   if (!isAdminAuthorized(req)) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
 
+  const { id } = await params;
   const body = await req.json();
   const { status, fulfillmentStatus, trackingNumber, trackingUrl, priceOverride, notes } =
     body as {
@@ -55,7 +57,7 @@ export async function PATCH(req: NextRequest, { params }: { params: { id: string
     };
 
   const order = await prisma.order.update({
-    where: { id: params.id },
+    where: { id },
     data: {
       ...(status && { status: status as never }),
       ...(fulfillmentStatus && { fulfillmentStatus: fulfillmentStatus as never }),

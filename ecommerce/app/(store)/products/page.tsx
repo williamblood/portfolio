@@ -6,23 +6,24 @@ export const metadata: Metadata = { title: "Shop All" };
 export const revalidate = 3600;
 
 interface Props {
-  searchParams: { category?: string; q?: string; page?: string };
+  searchParams: Promise<{ category?: string; q?: string; page?: string }>;
 }
 
 const PAGE_SIZE = 20;
 
 export default async function ProductsPage({ searchParams }: Props) {
-  const page = Math.max(1, parseInt(searchParams.page ?? "1"));
+  const { category, q, page: pageParam } = await searchParams;
+  const page = Math.max(1, parseInt(pageParam ?? "1"));
   const skip = (page - 1) * PAGE_SIZE;
 
   const where = {
     inStock: true,
-    ...(searchParams.category && { category: searchParams.category }),
-    ...(searchParams.q && {
+    ...(category && { category }),
+    ...(q && {
       OR: [
-        { name: { contains: searchParams.q, mode: "insensitive" as const } },
-        { description: { contains: searchParams.q, mode: "insensitive" as const } },
-        { tags: { has: searchParams.q } },
+        { name: { contains: q, mode: "insensitive" as const } },
+        { description: { contains: q, mode: "insensitive" as const } },
+        { tags: { has: q } },
       ],
     }),
   };
@@ -58,7 +59,7 @@ export default async function ProductsPage({ searchParams }: Props) {
       {/* Header */}
       <div className="mb-10">
         <h1 className="font-serif text-3xl font-light mb-2">
-          {searchParams.category ?? "All Products"}
+          {category ?? "All Products"}
         </h1>
         <p className="text-obsidian/50 text-sm">{total} items</p>
       </div>
@@ -71,7 +72,7 @@ export default async function ProductsPage({ searchParams }: Props) {
             <li>
               <a
                 href="/products"
-                className={`text-sm ${!searchParams.category ? "font-medium" : "text-obsidian/60 hover:text-obsidian"}`}
+                className={`text-sm ${!category ? "font-medium" : "text-obsidian/60 hover:text-obsidian"}`}
               >
                 All
               </a>
@@ -80,7 +81,7 @@ export default async function ProductsPage({ searchParams }: Props) {
               <li key={cat}>
                 <a
                   href={`/products?category=${encodeURIComponent(cat)}`}
-                  className={`text-sm ${searchParams.category === cat ? "font-medium" : "text-obsidian/60 hover:text-obsidian"}`}
+                  className={`text-sm ${category === cat ? "font-medium" : "text-obsidian/60 hover:text-obsidian"}`}
                 >
                   {cat}
                 </a>
@@ -110,8 +111,8 @@ export default async function ProductsPage({ searchParams }: Props) {
                     <a
                       key={p}
                       href={`/products?${new URLSearchParams({
-                        ...(searchParams.category && { category: searchParams.category }),
-                        ...(searchParams.q && { q: searchParams.q }),
+                        ...(category && { category }),
+                        ...(q && { q }),
                         page: String(p),
                       })}`}
                       className={`w-10 h-10 flex items-center justify-center text-sm border transition-colors ${

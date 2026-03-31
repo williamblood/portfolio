@@ -5,13 +5,14 @@ import type { Metadata } from "next";
 export const metadata: Metadata = { title: "Order Confirmed" };
 
 interface Props {
-  searchParams: { orderId?: string };
+  searchParams: Promise<{ orderId?: string }>;
 }
 
 export default async function OrderConfirmationPage({ searchParams }: Props) {
-  const order = searchParams.orderId
+  const { orderId } = await searchParams;
+  const order = orderId
     ? await prisma.order.findUnique({
-        where: { id: searchParams.orderId },
+        where: { id: orderId },
         include: { customer: true, items: true },
       })
     : null;

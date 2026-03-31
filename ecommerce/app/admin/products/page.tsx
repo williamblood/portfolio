@@ -7,11 +7,12 @@ export const metadata: Metadata = { title: "Products" };
 export const dynamic = "force-dynamic";
 
 interface Props {
-  searchParams: { page?: string };
+  searchParams: Promise<{ page?: string }>;
 }
 
 export default async function AdminProductsPage({ searchParams }: Props) {
-  const page = Math.max(1, parseInt(searchParams.page ?? "1"));
+  const { page: pageParam } = await searchParams;
+  const page = Math.max(1, parseInt(pageParam ?? "1"));
   const limit = 20;
   const skip = (page - 1) * limit;
 

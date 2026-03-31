@@ -25,14 +25,15 @@ const FULFILLMENT_COLORS: Record<string, string> = {
 };
 
 interface Props {
-  searchParams: { status?: string; page?: string };
+  searchParams: Promise<{ status?: string; page?: string }>;
 }
 
 export default async function AdminOrdersPage({ searchParams }: Props) {
-  const page = Math.max(1, parseInt(searchParams.page ?? "1"));
+  const { status, page: pageParam } = await searchParams;
+  const page = Math.max(1, parseInt(pageParam ?? "1"));
   const limit = 20;
   const skip = (page - 1) * limit;
-  const where = searchParams.status ? { status: searchParams.status as never } : {};
+  const where = status ? { status: status as never } : {};
 
   const [orders, total] = await Promise.all([
     prisma.order.findMany({
@@ -62,7 +63,7 @@ export default async function AdminOrdersPage({ searchParams }: Props) {
               key={s}
               href={s ? `/admin/orders?status=${s}` : "/admin/orders"}
               className={`px-3 py-1.5 text-xs rounded border transition-colors ${
-                searchParams.status === s || (!searchParams.status && !s)
+                status === s || (!status && !s)
                   ? "bg-white text-obsidian border-white"
                   : "border-white/20 text-white/60 hover:border-white/40"
               }`}
@@ -144,7 +145,7 @@ export default async function AdminOrdersPage({ searchParams }: Props) {
             <Link
               key={p}
               href={`/admin/orders?${new URLSearchParams({
-                ...(searchParams.status && { status: searchParams.status }),
+                ...(status && { status }),
                 page: String(p),
               })}`}
               className={`w-9 h-9 flex items-center justify-center text-sm border rounded transition-colors ${
