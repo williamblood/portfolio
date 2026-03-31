@@ -51,3 +51,15 @@ body {
 .btn-secondary {
   @apply border border-obsidian text-obsidian px-8 py-4 text-xs tracking-[3px] uppercase font-medium hover:bg-obsidian hover:text-white transition-colors;
 }
+
+/* Marquee animation */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-33.333%); }
+}
+
+/* Scroll indicator line */
+@keyframes scroll-line {
+  0%   { transform: translateY(-100%); }
+  100% { transform: translateY(200%); }
+}

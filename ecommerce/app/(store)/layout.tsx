@@ -7,7 +7,8 @@ export default function StoreLayout({ children }: { children: React.ReactNode })
     <>
       <Navbar />
       <CartDrawer />
-      <main className="pt-16 min-h-screen">{children}</main>
+      {/* pt accounts for announcement bar (32px) + nav (72px) on desktop, nav only (64px) on mobile */}
+      <main className="pt-16 md:pt-[104px] min-h-screen">{children}</main>
       <Footer />
     </>
   );
