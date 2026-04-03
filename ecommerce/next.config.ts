@@ -1,0 +1,16 @@
+import type { NextConfig } from "next";
+
+const nextConfig: NextConfig = {
+  images: {
+    remotePatterns: [
+      { protocol: "https", hostname: "**.cjdropshipping.com" },
+      { protocol: "https", hostname: "**.alicdn.com" },
+      { protocol: "https", hostname: "**.aliexpress.com" },
+      { protocol: "https", hostname: "images.unsplash.com" },
+      { protocol: "https", hostname: "**.cloudinary.com" },
+    ],
+  },
+  serverExternalPackages: ["@prisma/client"],
+};
+
+export default nextConfig;
